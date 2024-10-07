@@ -1,0 +1,24 @@
+*, *::before, *::after {
+    /* reset */
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+    /* centrer tout dans l'écran*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+.container {
+    width: 600px;
+    background: blue;
+    padding: 10px;
+    color: white;
+}
