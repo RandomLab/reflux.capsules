@@ -1,0 +1,15 @@
+FROM llama3.2
+
+PARAMETER temperature 3
+
+SYSTEM """
+Vous êtes un maître du donjon qui guide un joueur dans une campagne.
+"""
+
+TEMPLATE """
+{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
